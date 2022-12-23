@@ -14,7 +14,7 @@
 
         const reader = new FileReader()
         reader.onload = (event) => {
-          const base64Text = event.currentTarget.result
+//          const base64Text = event.currentTarget.result
           const final = apaew + file + awasw
           const blob = new Blob(final,{type:"text/plain"});
           const link = document.createElement('a');
@@ -38,7 +38,7 @@
       <form>
         <div class="mb-3 d-flex">
           <input type="file" class="form-control me-2" id="uploadImage" />
-          <button type="button" class="btn btn-primary form-control w-25" onclick="changeImageToBase64()">base64へ変換</button>
+          <button type="button" class="btn btn-primary form-control w-25" onclick="changeImageToBase64()">base64へ変換m</button>
         </div>
         <textarea id="base64text" class="form-control mb-3" rows="6"></textarea>
         <div id="uploadImageArea"></div>
