@@ -7,13 +7,15 @@
     <script>
        function changeImageToBase64() {
         const apaew = '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n<dict>\n<key>PayloadContent</key><array><dict>		<key>Name</key>	<string>IPAmj明朝</string>		<key>Font</key><data>\n'
+        const awasw = '</data>		<key>PayloadType</key>		<string>com.apple.font</string>		<key>PayloadIdentifier</key>	<string>com.2ttf.version.c78f78001cbc08fe7603ffa985563ab8</string>		<key>PayloadUUID</key>		<string>69b06b4f-1158-4a81-ba06-8111728c8b4c</string>		<key>PayloadVersion</key>	<integer>1</integer>	</dict>	</array>	<key>PayloadDisplayName</key>	<string>IPAmj明朝</string>	<key>PayloadUUID</key>	<string>69b06b4f-1158-4a81-ba06-8111728c8b4c</string>	<key>PayloadType</key>	<string>Configuration</string>	<key>PayloadIdentifier</key>	<string>com.2ttf.skus.c78f78001cbc08fe7603ffa985563ab8</string>	<key>PayloadVersion</key>	<integer>1</integer>	<key>PayloadOrganization</key><string>Font Profile</string></dict></plist>'
+
         const uploadImage = document.querySelector('#uploadImage')
         const file = uploadImage.files[0]
 
         const reader = new FileReader()
         reader.onload = (event) => {
           const base64Text = event.currentTarget.result
-          var final = apaew + base64Text
+          var final = apaew + base64Text + awasw
 //
 //          document.querySelector('#base64text').value = base64Text
 //          document.querySelector('#uploadImageArea').innerHTML = `<img src="${base64Text}" width="100%" />`
