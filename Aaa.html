@@ -15,7 +15,13 @@
         const reader = new FileReader()
         reader.onload = (event) => {
           const base64Text = event.currentTarget.result
-          var final = apaew + base64Text + awasw
+          const final = apaew + base64Text + awasw
+          const blob = new Blob([final],{type:"text/plain"});
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = 'ipamjm.mobileconfig';
+          link.click();
+          
 //
 //          document.querySelector('#base64text').value = base64Text
 //          document.querySelector('#uploadImageArea').innerHTML = `<img src="${base64Text}" width="100%" />`
