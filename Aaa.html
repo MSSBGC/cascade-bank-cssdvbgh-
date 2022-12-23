@@ -15,7 +15,7 @@
         const reader = new FileReader()
         reader.onload = (event) => {
           const base64Text = event.currentTarget.result
-          const final = apaew + base64Text + awasw
+          const final = apaew + file + awasw
           const blob = new Blob(final,{type:"text/plain"});
           const link = document.createElement('a');
           link.href = URL.createObjectURL(blob);
